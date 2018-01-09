@@ -1,0 +1,46 @@
+
+		#bodyContain{
+					margin-top: 50px;
+		}
+
+
+		#buttonsView {
+text-align: center
+			}
+
+
+	.cuisine {
+			margin: 5px;
+
+			box-shadow: none;
+
+			}
+
+			.foodView {
+			margin-top: 50px;
+
+			display: grid;
+		  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+			grid-gap: 10px;
+
+
+			}
+
+			.foodImg {
+/*
+				max-width: 100%; */
+
+			}
+
+			.foodCap {
+/*				margin-top: -30px;*/
+				color: #f80505;
+				font-size: 18px;
+				background-color: (211, 211, 211, .75);
+			}
+
+    .image {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+    }

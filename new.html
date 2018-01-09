@@ -1,0 +1,39 @@
+
+
+		$.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+
+		// Creating a div to view the gallery.
+
+		var foodView = $("<div class='foodView'>");
+
+		var gifData = response.data;
+
+
+		//gets the image rating
+		 for (var i = 0; i < response.data.length; i++) {
+
+           var imageDiv = $('div').css('background-image', 'url(' + preview + ')');
+
+
+
+			 	var imageId = gifData[i].id;
+
+			 	var preview = gifData[i].images.fixed_height_still.url;
+
+			 	var animated = gifData[i].images.fixed_height.url;
+//			 	var animated =
+			 	var rated = gifData[i].rating;
+
+			 	var pOne = $("<p>").text("Rating: " + rated).attr({class: "foodCap"});
+
+
+			 	var prev = $("<div>").css('background-image', 'url(' + preview + ')').addClass('image');
+
+        // .attr({ src: preview, alt: animated, class: "foodImg" });
+
+				prev.append(pOne);
+				foodView.append(prev);
+//
